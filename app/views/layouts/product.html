@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>G2babies - Product</title>
+        <link href="styles/compiled/styles.css" rel="stylesheet"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./scripts/scripts.js" defer></script>
+    </head>
+    <body class="dark:bg-gray-900 dark:text-gray-200" >
+        <div class="header"></div>
+        
+        <!-- Breadcrumbs navigation -->
+        <div class="breadcrumbs">
+            
+        </div>
+        
+        <!-- Product details container -->
+        <div class="product-panel"></div>
+        
+        <!-- Related products -->
+        <div class="relatedProducts-panel">
+            <div class="relatedProducts-headpanel">
+                <p class="font-bold">Related products</p>
+                <a href="./search.html" class="font-bold inline">More products <span class="text-indigo-600 dark:text-purple-400">></span></a>
+            </div>
+
+            <div class="relatedProducts-grid-container">
+                <div class="relatedProducts-grid"></div>
+            </div>
+        </div>
+        <div class="footer"></div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(".header").load("header.html", function() {
+                    loadNavBarContents();
+                    loadSideBarContents();
+                });
+                $(".footer").load("footer.html")
+            })
+        </script>
+    </body>
+</html>

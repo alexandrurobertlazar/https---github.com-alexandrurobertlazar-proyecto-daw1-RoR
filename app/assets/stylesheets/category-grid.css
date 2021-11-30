@@ -1,0 +1,180 @@
+    .main-container {
+        @apply px-8 pt-4;
+    }
+
+    .title-grid {
+        @apply md:flex flex-row justify-between pt-8;
+    }
+
+    .title-category {
+        @apply font-bold text-3xl text-center;
+    }
+
+    /* View selector and category name */
+    .view-selector {
+        @apply flex flex-col w-auto md:flex-row justify-around;
+    }
+
+    .grid-view {
+        @apply place-self-center cursor-pointer md:flex flex-row lg:items-center;
+    }
+
+    .grid-view-text {
+        @apply text-indigo-600 sm:mr-0 invisible lg:visible mb-2 lg:mb-0 ml-1 lg:mr-4 dark:text-purple-400;
+    }
+
+    .dark-grid-icon {
+        @apply hidden invisible dark:visible dark:block m-auto;
+    }
+
+    .light-grid-icon {
+        @apply dark:hidden dark:invisible m-auto;
+    }
+
+    .list-view {
+        @apply place-self-center cursor-pointer md:flex flex-row lg:items-center;
+    }
+
+    .product-counter {
+        @apply place-self-center md:flex flex-row lg:items-center;
+    }
+
+    .products-numbers {
+        @apply rounded-lg bg-gray-200 flex flex-col justify-center px-2 text-indigo-600 font-medium text-center;
+    }
+
+    .products-numbers-text {
+        @apply ml-1 invisible md:visible text-center;
+    }
+
+    .products_panel {
+        @apply lg:flex flex-row mt-4 md:mt-8 lg:mt-16;
+    }
+
+    /* Subcategories */
+    .subcategories-panel {
+        @apply mb-8 lg:w-2/6 flex flex-col;
+    }
+
+    .subcategories-list {
+        @apply flex flex-col justify-between;
+    }
+
+    .specific-subcategory {
+        @apply flex flex-row justify-between items-center w-full my-2;
+    }
+
+    .products-subcategory-number {
+        @apply rounded-lg bg-gray-200 flex flex-col justify-center px-2 text-indigo-600 font-medium;
+    }
+
+    /* Price selector */
+    .price-selector-panel {
+        @apply w-full flex flex-col;
+    }
+
+    .minmax-title {
+        @apply font-bold text-lg text-center my-4 lg:text-left;
+    }
+
+    .price-range {
+        @apply w-full cursor-pointer;
+    }
+
+    .minmax-boxes-panel {
+        @apply flex flex-row justify-between items-center;
+    }
+
+    .minmax-box {
+        @apply flex flex-col w-1/3 justify-center;
+    }
+
+    .minmax-text {
+        @apply font-bold text-sm text-center mt-8 lg:text-left;
+    }
+
+    .minmax-input {
+        @apply py-1 border-2 bg-gray-200 rounded-md border-gray-300 dark:text-black text-center;
+    }
+
+    .price-selector-buttons-panel {
+        @apply flex flex-row mt-10 justify-between;
+    }
+
+    .apply-button {
+        @apply px-4 py-2 rounded-lg text-white bg-indigo-600 border-black border-2 font-bold;
+    }
+
+    .reset-button {
+        @apply px-4 py-2 rounded-lg text-gray-400 font-bold;
+    }
+
+    /* Product entries */
+    .product-entries-panel {
+        @apply grid grid-cols-1 gap-12 w-auto pl-0 md:grid-cols-2 lg:grid-cols-3 lg:w-4/6 lg:pl-10;
+    }
+    
+    .specific-product-entry {
+        @apply border-2 rounded-md border-gray-200 dark:bg-gray-800 dark:hover:bg-gray-750 dark:border-0  flex flex-col px-5 py-5 justify-between;
+    }
+    
+    .image-container {
+        @apply w-full flex flex-row justify-center;
+    }
+
+    .product-image {
+        @apply flex flex-row justify-start items-start rounded-md;
+    }
+
+    .product-title {
+        @apply font-bold text-lg mt-4;
+    }
+
+    .product-description {
+        @apply text-sm text-gray-500 mb-5;
+    }
+
+    .buy-container {
+        @apply flex flex-row mt-4;
+    }
+
+    .product-cost-container {
+        @apply flex flex-col;
+    }
+
+    .cost {
+        @apply font-bold text-xl;
+    }
+
+    .previous-cost {
+        @apply text-sm line-through text-gray-400;
+    }
+
+    .buy-now-button {
+        @apply border-black border-2 rounded-lg px-2 py-0.5 font-bold text-white bg-indigo-600 dark:border-0 dark:bg-gray-700 dark:hover:bg-gray-600 ;
+    }
+
+    /* Show more products section */
+    .show-more-products-panel {
+        @apply flex flex-row justify-between mt-12;
+    }
+
+    .page-counter {
+        @apply flex flex-row justify-between w-1/12 items-center invisible md:visible;
+    }
+    
+    .show-more-products-button {
+        @apply px-2 py-2 rounded-lg text-white bg-indigo-600 border-black border-2 font-bold w-max md:w-auto;
+    }
+
+    .show-more-products-button-center {
+        @apply flex flex-row justify-around;
+    }
+
+    .missing-products {
+        @apply flex flex-row justify-center items-center invisible md:visible;
+    }
+
+    .missing-products-numbers {
+        @apply rounded-lg bg-gray-200 flex flex-col justify-center px-2 text-indigo-600 font-medium;
+    }

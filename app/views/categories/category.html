@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>G2babies - Videogames</title>
+        <link
+            href="styles/compiled/styles.css"
+            rel="stylesheet"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./scripts/scripts.js" defer></script>
+    </head>
+
+    <body class="category-darkmode">
+        <div class="header"></div>
+        <div class="category-panel">
+            <!-- Breadcrumbs navigation -->
+            <div class="category-panel-breadcrumbs-navigation"></div>
+
+            <!-- View selector and category name -->
+            <div class="category-panel-head-grid">
+                <div class="category-panel-head-grid-title-panel">
+                    <h2 class="category-panel-head-grid-title-panel-title"></h2>
+                </div>
+
+                <div class="category-panel-head-grid-items"></div>
+            </div>
+
+            <div class="category-panel-product-panel">
+
+                <!-- Subcategories -->
+                <div class="category-panel-product-panel-subcategory-panel">
+                    <div>
+                        <h3 class="category-panel-product-panel-subcategory-panel-title">Subcategories</h3>
+                        <div class="category-panel-product-panel-subcategory-panel-subcategoryrow">
+                            <div class="category-panel-products-panel-subcategory-panel-subcategoryrow-subcategory">
+                                <a href="category.html?name=DC%20Supervillains" class="category-panel-products-panel-subcategory-panel-subcategoryrow-text">DC Supervillains</a>
+                                <p class="category-panel-products-panel-subcategory-panel-subcategoryrow-number">320</p>
+                            </div>
+                            <div class="category-panel-products-panel-subcategory-panel-subcategoryrow-subcategory">
+                                <a href="category.html?name=One%20Piece" class="category-panel-products-panel-subcategory-panel-subcategoryrow-text">One Piece</a>
+                                <p class="category-panel-products-panel-subcategory-panel-subcategoryrow-number">112</p>
+                            </div>
+                            <div class="category-panel-products-panel-subcategory-panel-subcategoryrow-subcategory">
+                                <a href="category.html?name=Naruto" class="category-panel-products-panel-subcategory-panel-subcategoryrow-text">Naruto</a>
+                                <p class="category-panel-products-panel-subcategory-panel-subcategoryrow-number">32</p>
+                            </div>
+                            <div class="category-panel-products-panel-subcategory-panel-subcategoryrow-subcategory">
+                                <a href="category.html?name=MARVEL%20Superheroes" class="category-panel-products-panel-subcategory-panel-subcategoryrow-text">MARVEL Superheroes</a>
+                                <p class="category-panel-products-panel-subcategory-panel-subcategoryrow-number ">48</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Price selector-->
+                    <div class="category-panel-products-panel-price-panel">
+                        <div>
+                            <h3 class="category-panel-products-panel-price-panel-minmax-title">Minimum price</h3>
+                            <input type="range" min="1" max="1000" value="0" class="w-full cursor-pointer" id="myRange">
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-center my-4 lg:text-left">Maximum price</h3>
+                            <div>
+                                <input type="range" min="1" max="1000" value="1000" class="w-full cursor-pointer" id="myRange">
+                            </div>
+                        </div>
+                        <div class="category-panel-products-panel-price-panel-minmax-panel">
+                            <div class="category-panel-products-panel-price-panel-minmax-panel-min">
+                                <p class="category-panel-products-panel-price-panel-minmax-panel-text">Min</p>
+                                <input type="number" min="0" max="1000" placeholder="0" class="category-panel-products-panel-price-panel-minmax-panel-input">
+                            </div>
+                            <div class="category-panel-products-panel-price-panel-minmax-panel-max">
+                                <p class="category-panel-products-panel-price-panel-minmax-panel-text">Max</p>
+                                <input type="number" min="0" max="1000" placeholder="1000" class="category-panel-products-panel-price-panel-minmax-panel-input">
+                            </div>
+                        </div>
+
+                        <div class="category-panel-products-panel-price-panel-submit-panel">
+                            <button class="category-panel-products-panel-price-panel-submit-panel-apply">Apply</button>
+                            <button class="category-panel-products-panel-price-panel-submit-panel-reset">Reset</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product entries -->
+                <div class="category-panel-products-panel-innerproducts-panel">
+                </div>
+            </div>
+
+            <div class="flex flex-row justify-between">
+                <div class="flex flex-row justify-between w-1/12 items-center invisible md:visible">
+                    <p class="text-sm text-gray-400">Page:</p>
+                    <a href="">1</a>
+                    <a href="">2</a>
+                    <a href="" class="text-indigo-600 dark:text-purple-400">3</a>
+                    <a href="">4</a>
+                </div>
+                <div>
+                    <button class="category-panel-products-panel-innerproducts-panel-productentry-panel-rightside-panel-buttons-panel-productdetail w-max md:w-auto">
+                        <div class="flex flex-row justify-around">
+                            <p>Show more products</p>
+                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z"/></svg>
+                        </div>
+                    </button>
+                </div>
+                <div class="flex flex-row justify-center items-center invisible md:visible">
+                    <p class="category-panel-products-panel-subcategory-panel-subcategoryrow-number ">48</p>
+                    <p class="text-gray-400 ml-2">Products</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(".header").load("header.html", function() {
+                    loadNavBarContents();
+                    loadSideBarContents();
+                });
+                $(".footer").load("footer.html")
+            })
+        </script>
+    </body>
+</html>

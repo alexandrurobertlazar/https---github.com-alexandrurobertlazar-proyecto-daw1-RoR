@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>G2babies - Shopping Cart</title>
+    <link href="styles/compiled/styles.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./scripts/scripts.js" defer></script>
+</head>
+
+<body>
+    <div class="header"></div>
+
+    <body class="dark:bg-gray-900 dark:text-gray-300">
+
+        <div class="px-8 py-5">
+            <div class="text-sm text-gray-400">
+                <a href=".">Homepage</a> / <a href="#" class="dark:text-white">Cart</a>
+            </div>
+            <div>
+                <h2 class="cart-title">Your shopping cart</h2>
+            </div>
+        </div>
+
+
+        <div class="cart"></div>
+    </body>
+
+    <div class="footer"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".header").load("header.html", function () {
+                loadNavBarContents();
+                loadSideBarContents();
+            })
+            $(".footer").load("footer.html")
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>G2babies - Checkout</title>
+        <link
+            href="styles/compiled/styles.css"
+            rel="stylesheet"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./scripts/scripts.js" defer></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(function() {
+                $(".header").load("header.html", function() {
+                    loadNavBarContents();
+                    loadSideBarContents();
+                });
+                $(".footer").load("footer.html");
+            });
+        </script>
+    </head>
+    <body class="dark:bg-gray-900 dark:text-gray-200">
+        <div class="header"></div>
+        <div class="px-8 pt-4">
+            <div class="text-sm text-gray-400">
+                <p><a href=".">Homepage</a> / <a href="#" class="text-black dark:text-white">Checkout page</a></p>
+            </div>
+            <div class="md:mx-auto mx-5">
+                <div class="w-full flex flex-col md:flex-row">
+                    <div class="flex flex-col w-full md:mr-5 mt-5">
+                        <!-- Step 1 -->
+                        <div>
+                            <div>
+                                <h3 class="text-xl font-bold">Billing info</h3>
+                                <div class="flex flex-row justify-between">
+                                    <h4 class="text-sm text-gray-400">Please enter your billing info</h4>
+                                    <h4 class="text-sm text-gray-400">Step 1 of 5</h4>
+                                </div>
+                            </div>
+                            <div class="flex flex-col">
+                                <form action="#" method="post" class="flex flex-col" id="form-checkout">
+                                    <div class="flex flex-row">
+                                        <div class="flex flex-col w-1/2">
+                                            <div class="flex flex-col">
+                                                <p>First name</p>
+                                                <input type="text" name="firstname" placeholder="First name" class="border-2 border-black rounded-md bg-gray-200 py-2 pl-5 dark:text-black" required>
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <p>Email address</p>
+                                                <input type="email" name="email" placeholder="Email address" class="border-2 border-black rounded-md bg-gray-200 py-2 pl-5 dark:text-black" required>
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <p>Address</p>
+                                                <input type="text" name="address" id="address" placeholder="Address" value="Edificio central de G2babies" class="border-2 border-black rounded-md bg-gray-200 py-2 pl-5 dark:text-black" required>
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <p>State / Country</p>
+                                                <input type="text" name="country" id="country" list="countryList" placeholder="Choose a state or a country" value="ESPAÑA" class="border-2 border-black rounded-md bg-gray-200 py-2 pl-5 dark:text-black" required>
+                                                <datalist id="countryList">
+                                                    <option value="Country 1"></option>
+                                                    <option value="Country 2"></option>
+                                                    <option value="Country 3"></option>
+                                                    <option value="Country 4"></option>
+                                                </datalist>
+                                            </div>
+                                            <div class="flex items-center bg-gray-200 border-gray-300 border-2 rounded-md my-5 py-2 justify-center" onclick="billingInfoValidation()">
+                                                <input type="checkbox" id="differentAddress" class="ml-3 cursor-pointer invisible hidden">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" id="arrow-right-checkout"><path fill="none" d="M0 0h24v24H0z"/><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>                                                
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="invisible hidden" viewBox="0 0 24 24" width="24" height="24" id="arrow-down-checkout"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 13.172l4.95-4.95 1.414 1.414L12 16 5.636 9.636 7.05 8.222z"/></svg>
+                                                <p class="mx-5 text-black">Ship to a different address?</p>
+                                            </div>
+                                        </div>
+                                        <div class="flex flex-col mx-2.5 w-1/2">
+                                            <div class="flex flex-col">
+                                                <p>Last name</p>
+                                                <input type="text" placeholder="Last name" name="lastname" class="border-2 border-black rounded-md bg-gray-200 py-2 pl-5 dark:text-black" required>
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <p>Phone number</p>
+                                                <input type="tel" placeholder="Phone number" name="number" class="border-2 border-black rounded-md bg-gray-200 py-2 pl-5 dark:text-black" required>
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <p>Town / City</p>
+                                                <input type="text" placeholder="Town or city" name="city" id="city" value="Alcorcón" class="border-2 border-black rounded-md bg-gray-200 py-2 pl-5 dark:text-black" required>
+                                            </div>
+                                            <div class="flex flex-col">
+                                                <p>ZIP / Postal code</p>
+                                                <input type="text" name="postcode" placeholder="ZIP / Postal code" id="postcode" value="28921" class="border-2 border-black rounded-md bg-gray-200 py-2 pl-5 dark:text-black" required> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col mr-5" id="newAddressCheckout" style="display: none;">
+                                        <div class="w-full">
+                                        <p>New Address</p>
+                                        <input type="text" name="newAddress" id="newAddress" placeholder="New Address" class="w-full border-2 border-black rounded-md bg-gray-200 py-2 pl-5 dark:text-black">
+                                        <div class="w-full">
+                                            <p>State / Country</p>
+                                            <input type="text" name="newCountry" id="newCountry" list="countryList" placeholder="Choose a state or a country" class="w-full border-2 border-black rounded-md bg-gray-200 py-2 pl-5 dark:text-black">
+                                        </div>
+                                        <div class="w-full">
+                                            <p>Town or city</p>
+                                            <input type="text" name="newCity" id="newCity" placeholder="Town or City" class="w-full border-2 border-black rounded-md bg-gray-200 py-2 pl-5 dark:text-black">
+                                        </div>
+                                        <div class="w-full">
+                                            <p>ZIP / Postal code</p>
+                                            <input type="text" name="newPostcode" id="newPostcode" placeholder="ZIP / Postal code" class="w-full border-2 border-black rounded-md bg-gray-200 py-2 pl-5 dark:text-black">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>   
+                        <!-- Step 2 -->
+                        <div class="md:mr-5 mt-5">
+                            <h3 class="text-xl font-bold">Billing method</h3>
+                            <div class="flex flex-row justify-between">
+                                <h4 class="text-sm text-gray-400">Please enter your shipment method</h4>
+                                <h4 class="text-sm text-gray-400">Step 2 of 5</h4>
+                            </div>
+                            <div class="flex flex-row justify-between mt-5 items-center bg-gray-200 border-2 border-gray-300 rounded-md" onclick="document.getElementById('checkout_fedex_shipment').checked='true'">
+                                <div class="grid grid-cols-2 sm:flex flex-row py-2 px-3 items-center" class="bg-gray-200">
+                                    <input type="radio" name="shipment" id="checkout_fedex_shipment" value="fedex" form="form-checkout" class="place-self-center border-l-2 border-gray-300 rounded-l-md cursor-pointer" required>
+                                    <span class="ml-5 font-bold w-1/6 md:w-auto dark:text-black">FedEx</span>
+                                    <span class="ml-10 text-indigo-600 font-bold w-1/6 md:w-auto"> +32 EUR</span>
+                                    <span class="font-bold ml-5 w-1/6 md:w-auto dark:text-black">Additional price</span>
+                                </div>
+                                <img loading="lazy" src="https://logos-marcas.com/wp-content/uploads/2020/04/FedEx-Logo-650x366.png" alt="Logo fedex" class="w-1/12 mr-3">
+                            </div>
+                            <div class="flex flex-row justify-between mt-5 items-center bg-gray-200 border-2 border-gray-300 rounded-md" onclick="document.getElementById('checkout_dhl_shipment').checked='true'">
+                                <div class="grid grid-cols-2 sm:flex flex-row py-2 px-3 items-center" class="bg-gray-200">
+                                    <input type="radio" name="shipment" id="checkout_dhl_shipment" value="dhl" form="form-checkout" class="place-self-center border-l-2 border-gray-300 rounded-l-md cursor-pointer" required>
+                                    <span class="ml-5 font-bold w-1/6 md:w-auto dark:text-black">DHL</span>
+                                    <span class="ml-10 text-indigo-600 font-bold w-1/6 md:w-auto"> +32 EUR</span>
+                                    <span class="font-bold ml-5 w-1/6 md:w-auto dark:text-black">Additional price</span>
+                                </div>
+                                <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/DHL_Logo.svg/2560px-DHL_Logo.svg.png" alt="Logo DHL" class="w-1/5">
+                            </div>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="md:mr-5 mt-5">
+                            <h3 class="text-xl font-bold">Payment method</h3>
+                            <div class="flex flex-row justify-between">
+                                <h4 class="text-sm text-gray-400">Please enter your payment method</h4>
+                                <h4 class="text-sm text-gray-400">Step 3 of 5</h4>
+                            </div>
+                            <div class="flex flex-row justify-between mt-5 items-center bg-gray-200 border-2 border-gray-300 rounded-md" onclick="document.getElementById('checkout_paypal_payment').checked='true'">
+                                <div class="flex flex-row py-2 px-3 items-center" class="bg-gray-200">
+                                    <input type="radio" name="payment" id="checkout_paypal_payment" value="paypal" form="form-checkout" class="border-l-2 border-gray-300 rounded-l-md cursor-pointer" required>
+                                    <span class="ml-5 font-bold dark:text-black">PayPal</span>
+                                </div>
+                                <img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="Logo PayPal" class="w-1/12 mr-3">
+                            </div>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="md:mr-5 mt-5">
+                            <h3 class="text-xl font-bold">Additional information</h3>
+                            <div class="flex flex-row justify-between">
+                                <h4 class="text-sm text-gray-400">Need something else? We will make it for you!</h4>
+                                <h4 class="text-sm text-gray-400">Step 4 of 5</h4>
+                            </div>
+                            <div class="mt-5 flex flex-col">
+                                <h3 class="font-bold">Order notes</h3>
+                                <textarea name="ordernotes" form="form-checkout" id="checkout_order_notes" cols="30" rows="7" class="bg-gray-200 border-2 border-gray-300 rounded-lg mt-2 px-4 py-1.5 dark:text-black" placeholder="Need a specific delivery day? Sending a gift? Let’s say ..."></textarea>
+                            </div>
+                        </div>
+                        <!-- Step 5 -->
+                        <div class="md:mr-5 mt-5">
+                            <h3 class="text-xl font-bold">Confirmation</h3>
+                            <div class="flex flex-row justify-between">
+                                <h4 class="text-sm text-gray-400">We are getting to the end. Just few clicks and your order is ready!</h4>
+                                <h4 class="text-sm text-gray-400">Step 5 of 5</h4>
+                            </div>
+                            <div class="flex flex-col dark:text-black">
+                                <div class="py-3 mt-5 flex flex-row items-center bg-gray-200 border-2 border-gray-300 rounded-md">
+                                    <input type="checkbox" name="confirmation" value="marketing" id="checkout_confirmation_marketing" form="form-checkout" class="ml-3 cursor-pointer" required>
+                                    <span class="ml-2.5">I agree with sending an Marketing and newsletter emails. No spam, promised!</span>
+                                </div>
+                                <div class="py-3 mt-2.5 flex flex-row items-center bg-gray-200 border-2 border-gray-300 rounded-md">
+                                    <input type="checkbox" name="confirmation" value="policy" id="checkout_confirmation_policy" form="form-checkout" class="ml-3 cursor-pointer" required>
+                                    <span class="ml-2.5">I agree with our <a href="article.html" class="underline">terms and conditions</a> and <a href="article.html" class="underline">privacy policy</a>.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Order summary -->
+                <div class="flex flex-col rounded-md border-2 border-gray-300 md:mt-0 mt-10 md:w-4/5 lg:w-3/5 md:mr-0 px-2.5 py-5 h-full" id="order-summary">
+                    
+                </div>
+            </div>
+            <div id="payment-button">
+                
+            </div>
+        </div>
+        <div class="footer"></div>
+    </body>
+    
+</html> 

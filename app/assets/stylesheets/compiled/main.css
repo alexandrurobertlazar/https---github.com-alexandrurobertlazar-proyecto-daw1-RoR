@@ -1,0 +1,52 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "../article.css";
+@import "../header.css";
+@import "../footer.css";
+@import "../category-grid.css";
+@import "../category.css";
+@import "../create_user.css";
+@import "../login.css";
+@import "../user.css";
+@import "../index.css";
+@import "../product.css";
+@import "../search.css";
+@import "../cart.css";
+
+/* Variables globales */
+@layer components {
+
+   body {
+      font-family: arial, sans-serif; 
+   }
+
+   .dark-icon {
+      @apply invisible hidden w-0 dark:visible dark:flex dark:w-auto;
+   }
+
+   .normal-icon {
+      @apply dark:invisible dark:hidden dark:w-0;
+   }
+   
+   .unselectable {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -o-user-select: none;
+      user-select: none;
+   }
+
+}
+
+
+/* 
+   Añade al final los ficheros css 
+   que quieras importar. 
+
+   Para poder usar los nuevos estilos
+   usa el comando:
+   npm run css-compile
+*/

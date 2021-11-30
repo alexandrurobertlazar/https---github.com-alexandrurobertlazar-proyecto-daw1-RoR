@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>G2babies - Videogames</title>
+        <link href="styles/compiled/styles.css" rel="stylesheet"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./scripts/scripts.js" defer></script>
+    </head>
+    <body class="dark:bg-gray-900 dark:text-gray-200" >
+        <div class="header"></div>
+
+        <div class="main-container">
+            <!-- Breadcrumbs navigation -->
+            <div class="text-sm text-gray-400" id="breadcrumbs"></div>
+
+            <!-- View selector and category name -->
+            <div class="title-grid">
+                <div class="pb-4">
+                    <h2 class="title-category"></h2>
+                </div>
+
+                <div class="view-selector"></div>
+            </div>
+
+            <div class="products_panel">
+                <!-- Subcategories -->
+                <div class="subcategories-panel">
+                    <div>
+                        <h3 class="product-title text-center lg:text-left">Subcategories</h3>
+                        <div class="subcategories-list">
+                            <div class="specific-subcategory">
+                                <a href="category_grid.html?name=DC%20Supervillains" class="text-sm">DC Supervillains</a>
+                                <p class="products-subcategory-number">320</p>
+                            </div>
+
+                            <div class="specific-subcategory">
+                                <a href="category_grid.html?name=One%20Piece" class="text-sm">One Piece</a>
+                                <p class="products-subcategory-number">112</p>
+                            </div>
+
+                            <div class="specific-subcategory">
+                                <a href="category_grid.html?name=Naruto" class="text-sm">Naruto</a>
+                                <p class="products-subcategory-number">32</p>
+                            </div>
+
+                            <div class="specific-subcategory">
+                                <a href="category_grid.html?name=MARVEL%20Superheroes" class="text-sm">MARVEL Superheroes</a>
+                                <p class="products-subcategory-number">48</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Price selector -->
+                    <div class="price-selector-panel">
+                        <div>
+                            <h3 class="minmax-title">Minimum price</h3>
+                            <input type="range" min="1" max="1000" value="0" class="price-range" id="myRange">
+                        </div>
+
+                        <div>
+                            <h3 class="minmax-title">Maximum price</h3>
+                            <input type="range" min="1" max="1000" value="1000" class="price-range" id="myRange">
+                        </div>
+
+                        <div class="minmax-boxes-panel">
+                            <div class="minmax-box">
+                                <p class="minmax-text">Min</p>
+                                <input type="text" placeholder="0" class="minmax-input">
+                            </div>
+
+                            <div class="minmax-box">
+                                <p class="minmax-text">Max</p>
+                                <input type="text" placeholder="1000" class="minmax-input">
+                            </div>
+                        </div>
+                        
+                        <div class="price-selector-buttons-panel">
+                            <button class="apply-button">Apply</button>
+                            <button class="reset-button">Reset</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product entries -->
+                <div class="product-entries-panel"></div>
+                <!-- End of product entries -->
+            </div>
+
+            <div class="show-more-products-panel">
+                <div class="page-counter">
+                    <p class="text-sm text-gray-400">Page:</p>
+                    <a href="">1</a>
+                    <a href="">2</a>
+                    <a href="" class="text-indigo-600 dark:text-purple-400">3</a>
+                    <a href="">4</a>
+                </div>
+
+                <div>
+                    <button class="show-more-products-button">
+                        <div class="show-more-products-button-center">
+                            <p>Show more products</p>
+                            <svg fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                <path fill="none" d="M0 0h24v24H0z"/>
+                                <path d="M12 15l-4.243-4.243 1.415-1.414L12 12.172l2.828-2.829 1.415 1.414z"/>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="missing-products">
+                    <p class="missing-products-numbers">48</p>
+                    <p class="text-gray-400 ml-2">Products</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer"></div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(".header").load("header.html", function() {
+                    loadNavBarContents();
+                    loadSideBarContents();
+                });
+                $(".footer").load("footer.html")
+            })
+        </script>
+    </body>
+</html>

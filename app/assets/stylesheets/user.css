@@ -1,0 +1,27 @@
+    .user-panel {
+        @apply flex flex-col place-items-center sm:flex-row flex-wrap justify-center lg:flex-nowrap xl:gap-x-16;
+    }
+
+    .user-panel-img {
+        @apply flex flex-row justify-center sm:w-1/2 py-20 xl:justify-end w-2/4;
+    }
+
+    .user-panel-img-circle {
+        @apply rounded-full bg-gray-200;
+    }
+
+    .user-panel-form-center {
+        @apply flex flex-col sm:flex-row justify-center ml-5 py-20 md:w-1/2 lg:py-28 xl:justify-start w-2/4;
+    }
+
+    .user-panel-form-column {
+        @apply flex flex-col mr-5 gap-y-2;
+    }
+
+    .user-panel-form-column-input {
+        @apply rounded-md bg-gray-200 py-1 text-center dark:text-black;
+    }
+
+    .user-panel-form-submit {
+        @apply text-white text-xl rounded-md mt-8 py-0.5 bg-indigo-600 cursor-pointer;
+    }

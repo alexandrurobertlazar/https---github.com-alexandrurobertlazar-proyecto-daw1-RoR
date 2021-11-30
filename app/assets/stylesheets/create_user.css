@@ -1,0 +1,25 @@
+    /* Breadcrumbs navigation */
+    .breadcrumps-navigation-container {
+        @apply flex flex-row items-center mx-10 mt-5;
+    }
+
+    .breadcrumps-navigation-text {
+        @apply text-sm text-gray-300 mr-1;
+    }
+
+    /* <!-- Registration form --> */
+    .create-user-form-title {
+        @apply text-4xl text-center font-bold mt-6;
+    }
+
+    .create-user-form {
+        @apply grid place-items-center gap-y-6 md:grid-cols-2 lg:w-3/4 mt-10 mx-auto xl:w-3/6;
+    }
+
+    .create-user-form-input {
+        @apply rounded-md bg-gray-200 py-1 px-14 text-center block dark:text-black;
+    }
+
+    .create-user-form-submit {
+        @apply bg-indigo-600 text-white text-center border border-black border-opacity-30 rounded-lg py-1 px-28 cursor-pointer;
+    }

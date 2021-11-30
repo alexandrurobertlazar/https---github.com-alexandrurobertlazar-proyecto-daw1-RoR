@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>G2babies - Home</title>
+        <link href="styles/compiled/styles.css" rel="stylesheet" defer/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    </head>
+    <body class="dark:bg-gray-900 dark:text-gray-300">
+        <div class="header"></div>
+
+        <!-- Banners -->
+        <div class="banners-panel">
+            <a href="article-about-us.html" class="specific-banner">
+                <div class="banners-innersquare">
+                    <h4 class="banners-subfocus">Get in touch</h4>
+                    <p class="banners-heading">About Us</p>
+                    <button class="banners-showarticle">Show Article <span class="banner-showarticle-icon">></span></button>
+                </div>
+            </a>
+            <a href="article-about-us.html" class="specific-banner">
+                <div class="banners-innersquare">
+                    <h4 class="banners-subfocus">Get in touch</h4>
+                    <p class="banners-heading">Careers</p>
+                    <button class="banners-showarticle">Show Article <span class="banner-showarticle-icon">></span></button>
+                </div>
+            </a>
+        </div>
+
+        <!-- Left "best selling products" area -->
+        <div class="products-panel">
+            <div class="bestselling-category-panel">
+                <h1 class="bestselling-heading">Best selling products</h1>
+                <div class="breaking-responsive-rows"><!--This class is used for breaking rows without affecting flexbox while in responsive view--></div>
+                <a href="category.html?name=Marvel%20Comics" class="bestselling-link">Marvel Comics</a>
+                <a href="category.html?name=Anime%20and%20Manga" class="bestselling-link">Anime and Manga</a>
+                <a href="category.html?name=Videogames" class="bestselling-link">Videogames</a>
+                <a href="category.html?name=DC%20Comics" class="bestselling-link">DC Comics</a>
+                <a href="category.html?name=Disney" class="bestselling-link">Disney</a>
+            </div>
+
+            <!-- Three products from best selling products -->
+            <div class="bestselling-product-panel">
+                <div class="bestselling-product-card">
+                </div>
+            </div>
+        </div>
+        <!-- Bottom links -->
+        <div class="footer"></div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(".header").load("header.html", function() {
+                    loadNavBarContents();
+                    loadSideBarContents();
+                })
+                $(".footer").load("footer.html")
+                
+            })
+        </script>
+        <script src="./scripts/scripts.js" defer></script>
+    </body>
+</html>
