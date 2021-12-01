@@ -165,7 +165,7 @@ const loadNavBarContents = async function() {
             onmouseleave='document.getElementById("navCat${key}").style.display="none"'
             >
                 <div class="category-button">
-                    <a href="category.html?name=${value.name}">${value.name}</a>
+                    <a href="/category/category?name=${value.name}">${value.name}</a>
                     <svg xmlns="http://www.w3.org/2000/svg" class="normal-icon icon icon-tabler icon-tabler-chevron-down" width="12" height="12" viewBox="0 0 24 24" stroke-width="3" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <polyline points="6 9 12 15 18 9" />
@@ -179,7 +179,7 @@ const loadNavBarContents = async function() {
             <div class="nav-subcategory" style="display: none;" id="navCat${key}">`
             Object.entries(value.subcategories).forEach((entry) => {
                 const [key,value] = entry
-                htmlContents += `<a href="category.html?name=${value}">${value}</a>`
+                htmlContents += `<a href="/category/category?name=${value}">${value}</a>`
             })
             htmlContents += `</div></div>`;
         })
@@ -192,7 +192,7 @@ const loadSideBarContents = async function() {
     var htmlContents = `
             <a href="javascript:void(0)" class="close-button" onclick="closeNav()">&times;</a>
             <div class="sidenav-element-title">
-                <a href=login.html> Sign in </a>
+                <a href=user/login> Sign in </a>
             </div>
             <div class="sidenav-element-title">
                 Contact Us
@@ -249,7 +249,7 @@ const loadSideBarContents = async function() {
             <div class="sidenav-subcategory-container" style="display: none;" id="sideBarCat${key}">`
             Object.entries(value.subcategories).forEach((entry) => {
                 const [key,value] = entry
-                htmlContents += `<a class="sidenav-subcategory-element" href="category.html?name=${value}">${value}</a>`
+                htmlContents += `<a class="sidenav-subcategory-element" href="/category/category?name=${value}">${value}</a>`
             })
             htmlContents += `</div>`;
             
@@ -294,7 +294,7 @@ const getQueryParams = ( params, url ) => {
     return qString ? qString[1] : null;
 };
 
-// Carga de los productos en list view ("category.html")
+// Carga de los productos en list view ("/category/category")
 const loadProductListNormalCategory = async function () {
     const category_name = getQueryParams('name', this.location.href).replace(/%20/g," ")
     
@@ -312,7 +312,7 @@ const loadProductListNormalCategory = async function () {
             categoryHeading = `${category_name}`
 
             displayHTML =`
-            <div class="category-panel-head-grid-items-view" onclick="window.location.href='category_grid.html?name=${category_name}'">
+            <div class="category-panel-head-grid-items-view" onclick="window.location.href='/category/category_grid?name=${category_name}'">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white" class="hidden invisible dark:visible dark:block m-auto"><path fill="none" d="M0 0h24v24H0z"/><path d="M21 3a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h18zM11 13H4v6h7v-6zm9 0h-7v6h7v-6zm-9-8H4v6h7V5zm9 0h-7v6h7V5z"/></svg>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="dark:hidden dark:invisible m-auto"><path fill="none" d="M0 0h24v24H0z"/><path d="M21 3a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h18zM11 13H4v6h7v-6zm9 0h-7v6h7v-6zm-9-8H4v6h7V5zm9 0h-7v6h7V5z"/></svg>
                 <p class="category-panel-head-grid-items-view-gridviewtext">Grid view</p>
@@ -365,7 +365,7 @@ const loadProductListNormalCategory = async function () {
                     <div class="category-panel-products-panel-innerproducts-panel-productentry-panel-rightside-panel-buttons-panel">
                         <button class="category-panel-products-panel-innerproducts-panel-productentry-panel-rightside-panel-buttons-panel-productdetail">
                             <div class="category-panel-products-panel-innerproducts-panel-productentry-panel-rightside-panel-buttons-panel-productdetail-text">
-                                <a href="product.html?id=${value.id}">Product detail</a>
+                                <a href="/product/product?id=${value.id}">Product detail</a>
                                 <svg fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12.172 12L9.343 9.172l1.414-1.415L15 12l-4.243 4.243-1.414-1.415z"/></svg>
                             </div>
                         </button>
@@ -389,7 +389,7 @@ const loadProductListNormalCategory = async function () {
     document.querySelector('.category-panel-products-panel-innerproducts-panel').innerHTML = htmlContents
 }
 
-// Carga de los productos en grid view ("category_grid.html")
+// Carga de los productos en grid view ("/category/category_grid")
 const loadProductListGridCategory = async function () {
     const category_name = getQueryParams('name', this.location.href).replace(/%20/g," ")
 
@@ -414,7 +414,7 @@ const loadProductListGridCategory = async function () {
                 <p class="grid-view-text">Grid view</p>
             </div>
 
-            <div class="list-view" onclick="window.location.href='category.html?name=${category_name}'">
+            <div class="list-view" onclick="window.location.href='/category/category?name=${category_name}'">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white" class="dark-grid-icon">
                     <path fill="none" d="M0 0h24v24H0z"/>
                     <path d="M8 4h13v2H8V4zM4.5 6.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 6.9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM8 11h13v2H8v-2zm0 7h13v2H8v-2z"/>
@@ -432,7 +432,7 @@ const loadProductListGridCategory = async function () {
             </div>`
 
             htmlContents +=`
-            <a href="product.html?id=${value.id}" class="specific-product-entry">
+            <a href="/product/product?id=${value.id}" class="specific-product-entry">
                 <div>
                     <div class="image-container">
                         <img loading="lazy" src="${value.picture[0]}" class="product-image" width="240" height="240" alt="Product Image"> 
@@ -467,7 +467,7 @@ const loadBestSellingIndex = async function() {
             const [key, value] = entry
             if (value.bestSeller) {
                 htmlContents +=`
-                    <a href="product.html?id=${value.id}" class="bestselling-product">
+                    <a href="/product/product?id=${value.id}" class="bestselling-product">
                         <div class="bestselling-product-image-container">
                             <img loading="lazy" src="${value.picture[0]}" class="bestselling-product-image" width="240" height="240" alt="Product Image"> 
                         </div>                        
@@ -490,7 +490,7 @@ const loadBestSellingIndex = async function() {
     document.querySelector('.bestselling-product-card').innerHTML = htmlContents
 }
 
-// Carga de los productos en list view ("search.html")
+// Carga de los productos en list view ("/category/category")
 const loadSearchListProduct = async function () {
     var htmlContents = ""
     await $.getJSON("./json/products.json", function(json){
@@ -529,7 +529,7 @@ const loadSearchListProduct = async function () {
                         <p class="search-panel-result-panel-products-panel-productentry-panel-rightside-panel-shippingbuttons-panel-deliverytext">Delivery in ${value.delivery_time} day</p>
                     </div>
                     <div class="search-panel-result-panel-products-panel-productentry-panel-rightside-panel-shippingbuttons-panel">
-                        <a href="product.html?id=${value.id}" class="search-panel-result-panel-products-panel-productentry-panel-rightside-panel-shippingbuttons-panel-apply">
+                        <a href="/product/product?id=${value.id}" class="search-panel-result-panel-products-panel-productentry-panel-rightside-panel-shippingbuttons-panel-apply">
                             <button>
                                 <div class="search-panel-result-panel-products-panel-productentry-panel-rightside-panel-shippingbuttons-panel-applytext">
                                     <p>Product Detail</p>
@@ -619,7 +619,7 @@ const loadCartProducts = async function () {
     })
     htmlContents += `
         <div class="flex flex-col-reverse items-center md:items-end md:mx-16">
-            <a href="checkout.html"
+            <a href="cart/checkout"
                 class="search-panel-result-panel-products-panel-productentry-panel-rightside-panel-shippingbuttons-panel-apply">
                 <div
                     class="search-panel-result-panel-products-panel-productentry-panel-rightside-panel-shippingbuttons-panel-applytext">
@@ -743,14 +743,14 @@ const loadCheckoutProducts = async function () {
         window.location.href = 'https://www.paypal.com/paypalme/AlexandruLazar/' + totalPrice
     }) 
 }
-// Carga de los productos en grid view ("search_grid.html")
+// Carga de los productos en grid view ("/category/category_grid")
 const loadSearchGridProduct = async function () {
     var htmlContents = ""
     await $.getJSON("./json/products.json", function(json){
         Object.entries(json.products).forEach((entry) => {
             const [key, value] = entry
             htmlContents +=`
-            <a href="product.html?id=${value.id}" class="specific-product-entry">
+            <a href="/product/product?id=${value.id}" class="specific-product-entry">
                 <div class="image-container">
                     <img loading="lazy" src="${value.picture}" class="product-image" width="240" height="240" alt="Product Image">
                 </div>
@@ -772,7 +772,7 @@ const loadSearchGridProduct = async function () {
     document.querySelector('.product-entries-panel').innerHTML = htmlContents
 }
 
-// Carga de los productos ("product.html")
+// Carga de los productos ("/product/product")
 const loadProduct = async function() {
     const prod_id = getQueryParams('id', this.location.href)
     var htmlContents = ""
@@ -785,11 +785,11 @@ const loadProduct = async function() {
             }
             breadCrumbsHTML = 
             `
-                <a href="index.html" class="breadcrumbs-text">Homepage</a>
+                <a href="/" class="breadcrumbs-text">Homepage</a>
                 <p class="breadcrumbs-text"> / </p>
-                <a href="category.html" class="breadcrumbs-text">${value.category}</a>
+                <a href="/category/category" class="breadcrumbs-text">${value.category}</a>
                 <p class="breadcrumbs-text"> / </p>
-                <a href="product.html?id=${value.id}" class="text-sm text-center dark:text-white">${value.name}</a>
+                <a href="/product/product?id=${value.id}" class="text-sm text-center dark:text-white">${value.name}</a>
             `
             imagesHTML = ""
             value.picture.forEach((entry) => {
@@ -895,7 +895,7 @@ const loadProduct = async function() {
                 const [childKey, childValue] = entry
                 if (childValue.category !== value.category || count === 4) return
                 relatedProductsHTML += `
-                <a href="product.html?id=${childValue.id}" class="relatedProducts-card">
+                <a href="/product/product?id=${childValue.id}" class="relatedProducts-card">
                     <div class="relatedProducts-image-container">
                         <img loading="lazy" src="${childValue.picture[0]}" class="relatedProducts-image" width="240" height="240" alt="Product Image"> 
                     </div>
@@ -920,14 +920,12 @@ const loadProduct = async function() {
     })
 
 }
-if (this.location.href.includes('category.html')) loadProductListNormalCategory()
-if (this.location.href.includes('category_grid.html')) loadProductListGridCategory()
-if (this.location.href.includes('search.html')) loadSearchListProduct()
-if (this.location.href.includes('search_grid.html')) loadSearchGridProduct()
-if (this.location.href.includes('index.html') || this.location.href.search('.html') == -1) loadBestSellingIndex()
-if (this.location.href.includes('product.html')) loadProduct()
-if (this.location.href.includes('cart.html')) loadCartProducts()
-if (this.location.href.includes('checkout.html')) loadCheckoutProducts()
+if (this.location.href.includes('/category/category')) loadProductListNormalCategory()
+if (this.location.href.includes('/category/category_grid')) loadProductListGridCategory()
+if (this.location.href.includes('welcome/index') || this.location.href.search('.html') == -1) loadBestSellingIndex()
+if (this.location.href.includes('/product/product')) loadProduct()
+if (this.location.href.includes('cart/cart')) loadCartProducts()
+if (this.location.href.includes('cart/checkout')) loadCheckoutProducts()
 /* Funciones de header */
 function openNav() {
   document.getElementById("sidenav").style.display = "flex";
@@ -971,7 +969,7 @@ function readNavSearch() {
     document.getElementById("mobile-search-screen").style.width = "100%";
     document.getElementById("mobile-search-screen").style.display = "flex";
   } else {
-    window.location.replace("search.html");
+    window.location.replace("/category/category");
   }
 }
 
@@ -983,6 +981,6 @@ function closeMobileSearch() {
 // Lee si le das a enter en cualquier input
 $(".searchInput").on("keyup", function (e) {
   if (e.keyCode == 13) {
-    window.location.replace("search.html");
+    window.location.replace("/category/category");
   }
 });

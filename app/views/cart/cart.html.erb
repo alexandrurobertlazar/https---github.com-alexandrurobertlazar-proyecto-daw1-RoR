@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>G2babies - Shopping Cart</title>
-    <link href="styles/compiled/styles.css" rel="stylesheet" />
+    <link href="/styles/compiled/styles.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./scripts/scripts.js" defer></script>
+    <script src="/scripts/scripts.js" defer></script>
 </head>
 
 <body>
@@ -31,11 +31,11 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function () {
-            $(".header").load("header.html", function () {
+            $(".header").load("/misc/header", function () {
                 loadNavBarContents();
                 loadSideBarContents();
             })
-            $(".footer").load("footer.html")
+            $(".footer").load("/misc/footer")
         })
     </script>
 </body>

@@ -12,11 +12,11 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
             $(function() {
-                $(".header").load("header.html", function() {
+                $(".header").load("/misc/header", function() {
                     loadNavBarContents();
                     loadSideBarContents();
                 });
-                $(".footer").load("footer.html");
+                $(".footer").load("/misc/footer");
             });
         </script>
     </head>
@@ -177,7 +177,7 @@
                                 </div>
                                 <div class="py-3 mt-2.5 flex flex-row items-center bg-gray-200 border-2 border-gray-300 rounded-md">
                                     <input type="checkbox" name="confirmation" value="policy" id="checkout_confirmation_policy" form="form-checkout" class="ml-3 cursor-pointer" required>
-                                    <span class="ml-2.5">I agree with our <a href="article.html" class="underline">terms and conditions</a> and <a href="article.html" class="underline">privacy policy</a>.</span>
+                                    <span class="ml-2.5">I agree with our <a href="article/article" class="underline">terms and conditions</a> and <a href="article/article" class="underline">privacy policy</a>.</span>
                                 </div>
                             </div>
                         </div>

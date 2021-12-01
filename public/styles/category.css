@@ -1,0 +1,199 @@
+.category-darkmode {
+    @apply dark:bg-gray-900 dark:text-gray-200;
+}
+
+.category-panel {
+    @apply px-8 pt-4;
+}
+
+.category-panel-breadcrumbs-navigation {
+    @apply text-sm text-gray-400;
+}
+
+.category-panel-breadcrumbs-navigation-text {
+    @apply dark:text-white;
+}
+
+.category-panel-head-grid {
+    @apply pt-8 md:flex flex-row justify-between;
+}
+
+.category-panel-head-grid-title-panel {
+    @apply pb-4;
+}
+
+.category-panel-head-grid-title-panel-title {
+    @apply font-bold text-3xl text-center;
+}
+
+.category-panel-head-grid-items {
+    @apply flex flex-col w-auto md:flex-row justify-around;
+}
+
+.category-panel-head-grid-items-view {
+    @apply place-self-center cursor-pointer md:flex flex-row lg:items-center;
+}
+
+.category-panel-head-grid-items-view-gridviewtext {
+    @apply invisible sm:mr-0 lg:visible mb-2 lg:mb-0 ml-1 lg:mr-4;
+}
+
+.category-panel-head-grid-items-view-listviewtext {
+    @apply text-indigo-600 sm:mr-0 invisible lg:visible mb-2 lg:mb-0 ml-1 lg:mr-4 dark:text-purple-400;
+}
+
+.category-panel-head-grid-items-products {
+    @apply place-self-center md:flex flex-row lg:items-center;
+}
+
+.category-panel-head-grid-items-products-number {
+    @apply rounded-lg bg-gray-200 flex flex-col justify-center px-2 text-indigo-600 font-medium text-center;
+}
+
+.category-panel-head-grid-items-products-text {
+    @apply ml-1 invisible md:visible text-center;
+}
+
+.category-panel-product-panel {
+    @apply lg:flex flex-row mt-4 md:mt-8 lg:mt-16;
+}
+
+.category-panel-product-panel-subcategory-panel {
+    @apply mb-8 lg:w-2/6 flex flex-col;
+}
+
+.category-panel-product-panel-subcategory-panel-title {
+    @apply font-bold text-lg text-center lg:text-left;
+}
+
+.category-panel-product-panel-subcategory-panel-subcategoryrow {
+    @apply flex flex-col justify-between;
+}
+
+.category-panel-products-panel-subcategory-panel-subcategoryrow-subcategory {
+    @apply flex flex-row justify-between items-center w-full my-2;
+}
+
+.category-panel-products-panel-subcategory-panel-subcategoryrow-text {
+    @apply text-sm;
+}
+
+.category-panel-products-panel-subcategory-panel-subcategoryrow-number {
+    @apply rounded-lg bg-gray-200 flex flex-col justify-center px-2 text-indigo-600 font-medium;
+}
+
+.category-panel-products-panel-price-panel {
+    @apply w-full flex flex-col;
+}
+
+.category-panel-products-panel-price-panel-minmax-title {
+    @apply font-bold text-lg text-center my-4 lg:text-left;
+}
+
+.category-panel-products-panel-price-panel-minmax-panel {
+    @apply flex flex-row justify-between items-center;
+}
+
+.category-panel-products-panel-price-panel-minmax-panel-min {
+    @apply flex flex-col w-1/3 justify-center;
+}
+
+.category-panel-products-panel-price-panel-minmax-panel-max {
+    @apply flex flex-col w-1/3;
+}
+
+.category-panel-products-panel-price-panel-minmax-panel-text {
+    @apply font-bold text-sm text-center mt-8 lg:text-left;
+}
+
+.category-panel-products-panel-price-panel-minmax-panel-input {
+    @apply py-1 border-2 bg-gray-200 rounded-md border-gray-300 dark:text-black text-center;
+}
+
+.category-panel-products-panel-price-panel-submit-panel {
+    @apply flex flex-row mt-10 justify-between;
+}
+
+.category-panel-products-panel-price-panel-submit-panel-apply {
+    @apply px-4 py-2 rounded-lg text-white bg-indigo-600 border-black border-2 font-bold;
+}
+
+.category-panel-products-panel-price-panel-submit-panel-reset {
+    @apply px-4 py-2 rounded-lg text-gray-400 font-bold;
+}
+
+.category-panel-products-panel-innerproducts-panel {
+    @apply w-auto lg:pl-10 lg:w-4/6;
+}
+
+.category-panel-products-panel-innerproducts-panel-productentry {
+    @apply flex flex-col rounded-md border-gray-200 border-2 dark:bg-gray-800 dark:hover:bg-gray-750 dark:border-0  py-5 mb-5 md:flex md:flex-row;
+}
+
+.category-panel-products-panel-innerproducts-panel-productentry-image {
+    @apply w-auto flex flex-col items-stretch md:w-1/4 md:ml-2;
+}
+
+.category-panel-products-panel-innerproducts-panel-productentry-panel {
+    @apply w-auto ml-0 flex flex-col items-stretch md:mt-5 md:w-2/5 md:ml-5;
+}
+
+.category-panel-products-panel-innerproducts-panel-productentry-panel-title {
+    @apply font-bold text-xl text-center sm:text-3xl md:text-left md:text-lg;
+}
+
+.category-panel-products-panel-innerproducts-panel-productentry-panel-description {
+    @apply text-sm text-gray-500 text-center md:text-left;
+}
+
+.category-panel-products-panel-innerproducts-panel-productentry-panel-grid {
+    @apply mx-auto grid grid-cols-2 md:flex flex-row justify-around w-4/5 mt-5 flex-wrap md:mx-0;
+}
+
+.category-panel-products-panel-innerproducts-panel-productentry-panel-grid-column {
+    @apply m-auto md:w-1/2;
+}
+
+.category-panel-products-panel-innerproducts-panel-productentry-panel-rightside-panel {
+    @apply flex flex-col ml-0 md:w-1/4 md:ml-5;
+}
+
+.category-panel-products-panel-innerproducts-panel-productentry-panel-rightside-panel-price-panel {
+    @apply mt-6 md:mt-0;
+}
+
+.category-panel-products-panel-innerproducts-panel-productentry-panel-rightside-panel-price-panel-price {
+    @apply font-bold text-xl sm:text-2xl mt-0 text-center md:text-left md:text-lg md:mt-5;
+}
+
+.category-panel-products-panel-innerproducts-panel-productentry-panel-rightside-panel-price-panel-pricediscounted {
+    @apply line-through text-gray-400 text-center sm:text-lg md:text-left md:text-sm;
+}
+
+.category-panel-products-panel-innerproducts-panel-productentry-panel-rightside-panel-shipping-panel {
+    @apply flex flex-col mt-4;
+}
+
+.category-panel-products-panel-innerproducts-panel-productentry-panel-rightside-panel-shipping-panel-freeshipping {
+    @apply font-bold text-gray-400 text-sm text-center md:text-left;
+}
+
+.category-panel-products-panel-innerproducts-panel-productentry-panel-rightside-panel-shipping-panel-delivery {
+    @apply text-gray-400 text-sm text-center md:text-left;
+}
+
+.category-panel-products-panel-innerproducts-panel-productentry-panel-rightside-panel-buttons-panel {
+    @apply flex flex-col mt-4 mx-2 sm:mx-6 md:mx-0;
+}
+
+.category-panel-products-panel-innerproducts-panel-productentry-panel-rightside-panel-buttons-panel-productdetail {
+    @apply px-2 py-2 rounded-lg text-white bg-indigo-600 border-black border-2 dark:border-0 dark:bg-gray-700 dark:hover:bg-gray-600  font-bold;
+}
+
+.category-panel-products-panel-innerproducts-panel-productentry-panel-rightside-panel-buttons-panel-productdetail-text {
+    @apply flex flex-row justify-start;
+}
+
+.category-panel-products-panel-innerproducts-panel-productentry-panel-rightside-panel-buttons-panel-wishlist {
+    @apply flex flex-row px-2 py-2 rounded-lg bg-gray-300 border-black border-2 font-bold mt-2;
+}

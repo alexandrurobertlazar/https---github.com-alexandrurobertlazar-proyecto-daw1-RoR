@@ -2,14 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>G2babies - Careers</title>
-    <link
-      href="styles/compiled/styles.css"
-      rel="stylesheet"
-    />
+    <title>G2babies - About Us</title>
+    <%= stylesheet_link_tag "compiled/styles.css" %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./scripts/scripts.js" defer></script>
   </head>
+  
   <body class="dark:bg-gray-900 dark:text-gray-200" >
     <div class="header"></div>
     <div id="particles-js"></div>
@@ -18,12 +16,12 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
       $(document).ready(function () {
-        $(".header").load("header.html", function() {
+        $(".header").load("/misc/header", function() {
           loadNavBarContents();
           loadSideBarContents();
         });
-        $(".about-us").load("careers.html");
-        $(".footer").load("footer.html");
+        $(".about-us").load("articles/about-us");
+        $(".footer").load("/misc/footer");
       });
     </script>
     <!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->

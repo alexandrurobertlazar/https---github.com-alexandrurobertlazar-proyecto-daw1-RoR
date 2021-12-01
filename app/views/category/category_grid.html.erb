@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>G2babies - Videogames</title>
-        <link href="styles/compiled/styles.css" rel="stylesheet"/>
+        <link href="./styles/compiled/styles.css" rel="stylesheet"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="./scripts/scripts.js" defer></script>
     </head>
@@ -30,22 +30,22 @@
                         <h3 class="product-title text-center lg:text-left">Subcategories</h3>
                         <div class="subcategories-list">
                             <div class="specific-subcategory">
-                                <a href="category_grid.html?name=DC%20Supervillains" class="text-sm">DC Supervillains</a>
+                                <a href="/category/category_grid?name=DC%20Supervillains" class="text-sm">DC Supervillains</a>
                                 <p class="products-subcategory-number">320</p>
                             </div>
 
                             <div class="specific-subcategory">
-                                <a href="category_grid.html?name=One%20Piece" class="text-sm">One Piece</a>
+                                <a href="/category/category_grid?name=One%20Piece" class="text-sm">One Piece</a>
                                 <p class="products-subcategory-number">112</p>
                             </div>
 
                             <div class="specific-subcategory">
-                                <a href="category_grid.html?name=Naruto" class="text-sm">Naruto</a>
+                                <a href="/category/category_grid?name=Naruto" class="text-sm">Naruto</a>
                                 <p class="products-subcategory-number">32</p>
                             </div>
 
                             <div class="specific-subcategory">
-                                <a href="category_grid.html?name=MARVEL%20Superheroes" class="text-sm">MARVEL Superheroes</a>
+                                <a href="/category/category_grid?name=MARVEL%20Superheroes" class="text-sm">MARVEL Superheroes</a>
                                 <p class="products-subcategory-number">48</p>
                             </div>
                         </div>
@@ -120,11 +120,11 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
             $(document).ready(function() {
-                $(".header").load("header.html", function() {
+                $(".header").load("/misc/header", function() {
                     loadNavBarContents();
                     loadSideBarContents();
                 });
-                $(".footer").load("footer.html")
+                $(".footer").load("/misc/footer")
             })
         </script>
     </body>

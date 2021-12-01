@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>G2babies - Home</title>
-        <link href="styles/compiled/styles.css" rel="stylesheet" defer/>
+        <link href="/styles/compiled/styles.css" rel="stylesheet" defer/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
     </head>
@@ -12,14 +12,14 @@
 
         <!-- Banners -->
         <div class="banners-panel">
-            <a href="article-about-us.html" class="specific-banner">
+            <a href="articles/article-about-us" class="specific-banner">
                 <div class="banners-innersquare">
                     <h4 class="banners-subfocus">Get in touch</h4>
                     <p class="banners-heading">About Us</p>
                     <button class="banners-showarticle">Show Article <span class="banner-showarticle-icon">></span></button>
                 </div>
             </a>
-            <a href="article-about-us.html" class="specific-banner">
+            <a href="articles/article-about-us" class="specific-banner">
                 <div class="banners-innersquare">
                     <h4 class="banners-subfocus">Get in touch</h4>
                     <p class="banners-heading">Careers</p>
@@ -33,11 +33,11 @@
             <div class="bestselling-category-panel">
                 <h1 class="bestselling-heading">Best selling products</h1>
                 <div class="breaking-responsive-rows"><!--This class is used for breaking rows without affecting flexbox while in responsive view--></div>
-                <a href="category.html?name=Marvel%20Comics" class="bestselling-link">Marvel Comics</a>
-                <a href="category.html?name=Anime%20and%20Manga" class="bestselling-link">Anime and Manga</a>
-                <a href="category.html?name=Videogames" class="bestselling-link">Videogames</a>
-                <a href="category.html?name=DC%20Comics" class="bestselling-link">DC Comics</a>
-                <a href="category.html?name=Disney" class="bestselling-link">Disney</a>
+                <a href="/category/category?name=Marvel%20Comics" class="bestselling-link">Marvel Comics</a>
+                <a href="/category/category?name=Anime%20and%20Manga" class="bestselling-link">Anime and Manga</a>
+                <a href="/category/category?name=Videogames" class="bestselling-link">Videogames</a>
+                <a href="/category/category?name=DC%20Comics" class="bestselling-link">DC Comics</a>
+                <a href="/category/category?name=Disney" class="bestselling-link">Disney</a>
             </div>
 
             <!-- Three products from best selling products -->
@@ -51,11 +51,11 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
             $(document).ready(function() {
-                $(".header").load("header.html", function() {
+                $(".header").load("/misc/header", function() {
                     loadNavBarContents();
                     loadSideBarContents();
                 })
-                $(".footer").load("footer.html")
+                $(".footer").load("/misc/footer")
                 
             })
         </script>

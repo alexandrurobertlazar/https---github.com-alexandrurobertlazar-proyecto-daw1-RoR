@@ -1,0 +1,78 @@
+{
+    "categories": {
+        "disney":{
+            "id":1,
+            "name":"Disney",
+            "product_ids":[],   
+            "subcategories": {
+                "sub_1":"Villains",
+                "sub_2":"Heroes",
+                "sub_3":"Pixar",
+                "sub_4":"Princesses"
+            }
+        },
+        "anime_manga":{
+            "id":2,
+            "name":"Anime and Manga",
+            "product_ids":[],   
+            "subcategories": {
+                "sub_1":"One Piece",
+                "sub_2":"Naruto",
+                "sub_3":"Dragon Ball",
+                "sub_4":"Death Note"
+            }
+        },
+        "videogames": {
+            "id":3,
+            "name":"Videogames",
+            "product_ids":[],   
+            "subcategories": {
+                "sub_1":"Naughty Dog",
+                "sub_2":"Microsoft",
+                "sub_3":"Insomniac",
+                "sub_4":"LoL"
+            }
+        },
+        "movies":{
+            "id":4,
+            "name":"Movies",
+            "product_ids":[],   
+            "subcategories": {
+                "sub_1":"Fast and Furious",
+                "sub_2":"Star Wars",
+                "sub_3":"Alien",
+                "sub_4":"MCU"
+            }
+        },
+        "dc_comics":{
+            "id":5,
+            "name":"DC Comics",
+            "product_ids":[],   
+            "subcategories": {
+                "sub_1":"DC Superheroes",
+                "sub_2":"DC Supervillains",
+                "sub_3":"DC Antiheroes",
+                "sub_4":"Snyderverse"
+            }
+        },
+        "marvel_comics":{
+            "id":6,
+            "name":"Marvel Comics",
+            "product_ids":[],   
+            "subcategories": {
+                "sub_1":"MARVEL Superheroes",
+                "sub_2":"MARVEL Supervillains",
+                "sub_3":"MARVEL Antiheroes",
+                "sub_4":"MCU"
+            }
+        },
+        "model_kits":{
+            "id":7,
+            "name":"Model Kits",
+            "product_ids":[],   
+            "subcategories": {
+                "sub_1":"Fantasy"
+            }
+        }
+    }
+}

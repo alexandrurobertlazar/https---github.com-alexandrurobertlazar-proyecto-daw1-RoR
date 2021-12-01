@@ -26,19 +26,19 @@
                 <input type="password" class="login-input" placeholder="Password" required>
             </div>
 
-            <button type="button" onclick="document.location.href='user.html'" class="login-form-button">Login</button>
-            <button type="button" onclick="document.location.href='create_user.html'" class="login-form-register">Don't have an account yet? Register now</button>
+            <button type="button" onclick="document.location.href='user/user'" class="login-form-button">Login</button>
+            <button type="button" onclick="document.location.href='create_user/user'" class="login-form-register">Don't have an account yet? Register now</button>
         </form>
         
         <div class="footer"></div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
             $(function() {
-                $(".header").load("header.html", function() {
+                $(".header").load("/misc/header", function() {
                     loadNavBarContents();
                     loadSideBarContents();
                 });
-                $(".footer").load("footer.html")
+                $(".footer").load("/misc/footer")
             })
         </script>
     </body>
