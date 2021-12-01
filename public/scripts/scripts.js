@@ -156,7 +156,7 @@ checkDarkMode()
 // Carga de los contenidos de la barra de navegación
 const loadNavBarContents = async function() {
     var htmlContents = "";
-    await $.getJSON("./json/categories.json", function(json){
+    await $.getJSON("/json/categories.json", function(json){
         Object.entries(json.categories).forEach((entry) => {
             const [key, value] = entry
             htmlContents += `
@@ -236,7 +236,7 @@ const loadSideBarContents = async function() {
             <div class="sidenav-element-title">
                 Categories
             </div>`;
-    await $.getJSON("./json/categories.json", function(json){
+    await $.getJSON("/json/categories.json", function(json){
         Object.entries(json.categories).forEach((entry) => {
             const [key, value] = entry
             htmlContents += `
