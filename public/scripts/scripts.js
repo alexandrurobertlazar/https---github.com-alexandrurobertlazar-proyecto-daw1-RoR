@@ -299,7 +299,7 @@ const loadProductListNormalCategory = async function () {
     const category_name = getQueryParams('name', this.location.href).replace(/%20/g," ")
     
     var htmlContents = ""
-    await $.getJSON("./json/products.json", function(json){
+    await $.getJSON("/json/products.json", function(json){
         Object.entries(json.products).forEach((entry) => {
             const [key, value] = entry
             if (value.category != category_name && value.subcategory != category_name) {
@@ -394,7 +394,7 @@ const loadProductListGridCategory = async function () {
     const category_name = getQueryParams('name', this.location.href).replace(/%20/g," ")
 
     var htmlContents = ""
-    await $.getJSON("./json/products.json", function(json){
+    await $.getJSON("/json/products.json", function(json){
         Object.entries(json.products).forEach((entry) => {
             const [key, value] = entry
             if (value.category != category_name && value.subcategory != category_name) {
@@ -462,7 +462,7 @@ const loadProductListGridCategory = async function () {
 // Carga de los productos mejores vendidos
 const loadBestSellingIndex = async function() {
     var htmlContents = ""
-    await $.getJSON("./json/products.json", function(json){
+    await $.getJSON("/json/products.json", function(json){
         Object.entries(json.products).forEach((entry) => {
             const [key, value] = entry
             if (value.bestSeller) {
@@ -493,7 +493,7 @@ const loadBestSellingIndex = async function() {
 // Carga de los productos en list view ("/category/category")
 const loadSearchListProduct = async function () {
     var htmlContents = ""
-    await $.getJSON("./json/products.json", function(json){
+    await $.getJSON("/json/products.json", function(json){
         Object.entries(json.products).forEach((entry) => {
             const [key, value] = entry
             htmlContents +=`
@@ -555,7 +555,7 @@ const loadSearchListProduct = async function () {
 // Carga todos los productos en el cart (Esto se ira desde que tengamos ruby xd)
 const loadCartProducts = async function () {
     var htmlContents = ""
-    await $.getJSON("./json/products.json", function(json){
+    await $.getJSON("/json/products.json", function(json){
         count = 0
         Object.entries(json.products).forEach((entry) => {
             if (count === 5) return
@@ -619,7 +619,7 @@ const loadCartProducts = async function () {
     })
     htmlContents += `
         <div class="flex flex-col-reverse items-center md:items-end md:mx-16">
-            <a href="cart/checkout"
+            <a href="/cart/checkout"
                 class="search-panel-result-panel-products-panel-productentry-panel-rightside-panel-shippingbuttons-panel-apply">
                 <div
                     class="search-panel-result-panel-products-panel-productentry-panel-rightside-panel-shippingbuttons-panel-applytext">
@@ -642,7 +642,7 @@ const loadCheckoutProducts = async function () {
     `
     var totalPrice = 0
     var count = 0
-    await $.getJSON("./json/products.json", function(json){
+    await $.getJSON("/json/products.json", function(json){
         Object.entries(json.products).forEach((entry) => {
             if (count === 5) return
             count++
@@ -746,7 +746,7 @@ const loadCheckoutProducts = async function () {
 // Carga de los productos en grid view ("/category/category_grid")
 const loadSearchGridProduct = async function () {
     var htmlContents = ""
-    await $.getJSON("./json/products.json", function(json){
+    await $.getJSON("/json/products.json", function(json){
         Object.entries(json.products).forEach((entry) => {
             const [key, value] = entry
             htmlContents +=`
@@ -776,7 +776,7 @@ const loadSearchGridProduct = async function () {
 const loadProduct = async function() {
     const prod_id = getQueryParams('id', this.location.href)
     var htmlContents = ""
-    await $.getJSON("./json/products.json", function(json){
+    await $.getJSON("/json/products.json", function(json){
         Object.entries(json.products).forEach((entry) => {
             const [key, value] = entry
 

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/product/product'
   get '/misc/header'
   get '/misc/footer'
-  get 'cateogry/category'
+  get 'category/category'
   get '/category/category_grid'
   get 'cart/cart'
   get 'cart/checkout'
