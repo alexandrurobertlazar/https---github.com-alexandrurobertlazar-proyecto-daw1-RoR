@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @figure.name %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @figure.category %>
+</p>
+
+<p>
+  <strong>Subcategory:</strong>
+  <%= @figure.subcategory %>
+</p>
+
+<p>
+  <strong>Picture:</strong>
+  <%= @figure.picture %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @figure.price %>
+</p>
+
+<p>
+  <strong>Oldprice:</strong>
+  <%= @figure.oldPrice %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @figure.description %>
+</p>
+
+<p>
+  <strong>Attributes:</strong>
+  <%= @figure.attributes %>
+</p>
+
+<p>
+  <strong>Quality:</strong>
+  <%= @figure.quality %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @figure.company %>
+</p>
+
+<p>
+  <strong>Delivery:</strong>
+  <%= @figure.delivery %>
+</p>
+
+<p>
+  <strong>Delivery time:</strong>
+  <%= @figure.delivery_time %>
+</p>
+
+<p>
+  <strong>Stock:</strong>
+  <%= @figure.stock %>
+</p>
+
+<p>
+  <strong>Bestseller:</strong>
+  <%= @figure.bestseller %>
+</p>
+
+<%= link_to 'Edit', edit_figure_path(@figure) %> |
+<%= link_to 'Back', figures_path %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :figures
   root 'welcome#index'
   get 'welcome/index'
   get 'user/login'

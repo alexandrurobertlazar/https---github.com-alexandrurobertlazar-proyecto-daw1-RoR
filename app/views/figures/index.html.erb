@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Figures</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Subcategory</th>
+      <th>Picture</th>
+      <th>Price</th>
+      <th>Oldprice</th>
+      <th>Description</th>
+      <th>Attributes</th>
+      <th>Quality</th>
+      <th>Company</th>
+      <th>Delivery</th>
+      <th>Delivery time</th>
+      <th>Stock</th>
+      <th>Bestseller</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @figures.each do |figure| %>
+      <tr>
+        <td><%= figure.name %></td>
+        <td><%= figure.category %></td>
+        <td><%= figure.subcategory %></td>
+        <td><%= figure.picture %></td>
+        <td><%= figure.price %></td>
+        <td><%= figure.oldPrice %></td>
+        <td><%= figure.description %></td>
+        <td><%= figure.attributes %></td>
+        <td><%= figure.quality %></td>
+        <td><%= figure.company %></td>
+        <td><%= figure.delivery %></td>
+        <td><%= figure.delivery_time %></td>
+        <td><%= figure.stock %></td>
+        <td><%= figure.bestseller %></td>
+        <td><%= link_to 'Show', figure %></td>
+        <td><%= link_to 'Edit', edit_figure_path(figure) %></td>
+        <td><%= link_to 'Destroy', figure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Figure', new_figure_path %>

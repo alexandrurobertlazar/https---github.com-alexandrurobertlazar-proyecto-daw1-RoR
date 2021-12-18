@@ -1,0 +1,87 @@
+<%= form_with(model: figure) do |form| %>
+  <% if figure.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(figure.errors.count, "error") %> prohibited this figure from being saved:</h2>
+
+      <ul>
+        <% figure.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.text_field :category %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subcategory %>
+    <%= form.text_field :subcategory %>
+  </div>
+
+  <div class="field">
+    <%= form.label :picture %>
+    <%= form.text_field :picture %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :oldPrice %>
+    <%= form.text_field :oldPrice %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :attributes %>
+    <%= form.text_field :attributes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quality %>
+    <%= form.text_field :quality %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company %>
+    <%= form.text_field :company %>
+  </div>
+
+  <div class="field">
+    <%= form.label :delivery %>
+    <%= form.text_field :delivery %>
+  </div>
+
+  <div class="field">
+    <%= form.label :delivery_time %>
+    <%= form.text_field :delivery_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :stock %>
+    <%= form.text_field :stock %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bestseller %>
+    <%= form.check_box :bestseller %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

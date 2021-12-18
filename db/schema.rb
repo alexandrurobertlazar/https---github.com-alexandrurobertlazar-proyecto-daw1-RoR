@@ -10,11 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_18_125936) do
+ActiveRecord::Schema.define(version: 2021_12_18_131420) do
 
-  create_table "products", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table "figures", force: :cascade do |t|
     t.string "name"
     t.string "category"
     t.string "subcategory"
@@ -29,6 +27,8 @@ ActiveRecord::Schema.define(version: 2021_12_18_125936) do
     t.string "delivery_time"
     t.string "stock"
     t.boolean "bestseller"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
